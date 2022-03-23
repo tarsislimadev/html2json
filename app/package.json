@@ -1,0 +1,12 @@
+{
+  "name": "html2json",
+  "version": "0.1.0",
+  "description": "HTML 2 JSON",
+  "keywords": [
+    "html",
+    "json",
+    "parser"
+  ],
+  "author": "Tarsis de Lima (github.com/brtmvdl)",
+  "license": "MIT"
+}
