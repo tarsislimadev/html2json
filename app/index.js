@@ -16,11 +16,11 @@ const saveFile = (name, obj) => fs.writeFileSync(name, JSON.stringify(obj, null,
 const getChildren = (root) =>
   Array.from((typeof root.children === 'function' ? root.children() : root.children) || [])
 
-const nodes = (root) => ({
-  type: root.type,
-  name: root.name,
-  data: root.data?.toString().replace(/\n+/, ' ').replace(/\s+/, ' '),
-  children: getChildren(root)
+const nodes = (node) => ({
+  type: node.type,
+  name: node.name,
+  data: node.data?.toString().replace(/\n+/, ' ').replace(/\s+/, ' '),
+  children: getChildren(node)
     .filter((node) => ['tag', 'text'].indexOf(node.type) != -1)
     .map(nodes)
 })
